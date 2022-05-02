@@ -1,0 +1,9 @@
+---
+- name: "PLAY 1: Pushing vrfs using ansible, jinja and netconf"
+  hosts: routers
+  connection: netconf
+  tasks:
+   - name: "TASK 1: Replacing all VRFs with the below"
+     netconf_config:
+      content: "{{ lookup('template', 'templates/vrfdefinition.j2') }}"
+

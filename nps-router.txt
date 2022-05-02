@@ -1,0 +1,25 @@
+interface GigabitEthernet0/0/0
+ description <<Link to THS-1006>>
+ mtu 1524
+ no ip address
+ negotiation auto
+interface GigabitEthernet0/0/0.2
+ description MGT
+ encapsulation dot1Q 2
+ ip address 172.16.4.166 255.255.255.252
+interface GigabitEthernet0/0/0.3
+ description INTERNET VRF
+ encapsulation dot1Q 3
+ ip address 172.16.26.46 255.255.255.252
+interface GigabitEthernet0/0/0.6
+ description MOF VRF
+ encapsulation dot1Q 6
+ ip address 172.16.201.114 255.255.255.252
+interface GigabitEthernet0/0/1
+ description <<LINK TO SOPHOS>>
+ ip address 154.118.224.113 255.255.255.252
+ negotiation auto
+interface GigabitEthernet0/0/1.70
+ description MOF VRF
+ encapsulation dot1Q 70
+ ip address 172.16.201.117 255.255.255.252
